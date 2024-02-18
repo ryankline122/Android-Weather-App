@@ -14,7 +14,6 @@ class Client {
     private val apiKey = "60a020e32e5a46ea901164338241702"
     private val baseURL = "https://api.weatherapi.com/v1"
 
-
     fun getCurrentWeatherFor(location: String, callback: (String) -> Unit) {
         val queryUrlBuilder: HttpUrl.Builder = "$baseURL/current.json".toHttpUrl().newBuilder()
         queryUrlBuilder.addQueryParameter("key", apiKey)

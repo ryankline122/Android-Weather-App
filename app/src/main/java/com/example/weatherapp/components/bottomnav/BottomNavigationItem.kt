@@ -1,4 +1,4 @@
-package com.example.weatherapp.bottomnav
+package com.example.weatherapp.components.bottomnav
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

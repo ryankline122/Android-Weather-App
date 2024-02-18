@@ -1,4 +1,4 @@
-package com.example.weatherapp.bottomnav
+package com.example.weatherapp.components.bottomnav
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.fillMaxSize
