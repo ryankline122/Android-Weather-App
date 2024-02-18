@@ -55,6 +55,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("com.squareup.okhttp3:okhttp:4.9.1")
     implementation ("com.beust:klaxon:5.5")
+    implementation ("io.github.microutils:kotlin-logging-jvm:2.0.11")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-protobuf:1.2.1")

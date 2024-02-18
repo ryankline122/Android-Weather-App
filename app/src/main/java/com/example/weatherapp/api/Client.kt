@@ -12,11 +12,11 @@ import okio.IOException
 class Client {
     private val httpClient = OkHttpClient()
     private val apiKey = "60a020e32e5a46ea901164338241702"
-    private val baseURL = "http://api.weatherapi.com/v1"
+    private val baseURL = "https://api.weatherapi.com/v1"
 
 
     fun getCurrentWeatherFor(location: String, callback: (String) -> Unit) {
-        val queryUrlBuilder: HttpUrl.Builder = baseURL.toHttpUrl().newBuilder()
+        val queryUrlBuilder: HttpUrl.Builder = "$baseURL/current.json".toHttpUrl().newBuilder()
         queryUrlBuilder.addQueryParameter("key", apiKey)
         queryUrlBuilder.addQueryParameter("q", location)
 
@@ -27,11 +27,11 @@ class Client {
         httpClient.newCall(request).enqueue(object: Callback {
             override fun onFailure(call: Call, e: IOException) {
                 e.printStackTrace()
-                callback("error")
+                callback("failure")
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val result = response.body?.string() ?: "error"
+                val result = response.body?.string() ?: "responseError"
                 println(result)
                 callback(result)
             }
